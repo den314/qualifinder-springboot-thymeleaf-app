@@ -17,17 +17,17 @@ public class PersonController {
     @GetMapping("/add")
     public String personForm(Model model) {
         model.addAttribute("person", new Person());
-        return "view/add-person";
+        return "view/person/add-person";
     }
 
     @PostMapping("/add")
     public String addPerson(@Valid Person person, BindingResult bindingResult, Model model) {
 
         if (bindingResult.hasErrors()) {
-            return "view/add-person";
+            return "view/person/add-person";
         }
 
         model.addAttribute("person", person);
-        return "view/person-added";
+        return "view/person/person-added";
     }
 }
