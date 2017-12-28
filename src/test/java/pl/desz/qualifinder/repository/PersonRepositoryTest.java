@@ -16,7 +16,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @DataJpaTest
 public class PersonRepositoryTest {
 
-    private Person testPerson = new Person("theName", "surname", Arrays.asList("java", "python", "c"));
+    private Person testPersonWithAllMandatoryFields = new Person("theName", "surname", Arrays.asList("java", "python", "c"));
 
     @Autowired
     private TestEntityManager em;
@@ -26,7 +26,7 @@ public class PersonRepositoryTest {
 
     @Test
     public void shouldFindByName() {
-        Long entityId = (Long) em.persistAndGetId(testPerson);
+        Long entityId = (Long) em.persistAndGetId(testPersonWithAllMandatoryFields);
         Person person = pr.findByName("theName");
 
         assertThat(person).isNotNull();
@@ -36,7 +36,7 @@ public class PersonRepositoryTest {
 
     @Test
     public void shouldFindByNameIgnoreCase() {
-        Long entityId = (Long) em.persistAndGetId(testPerson);
+        Long entityId = (Long) em.persistAndGetId(testPersonWithAllMandatoryFields);
         Person person = pr.findByNameIgnoreCase("thename");
 
         assertThat(person).isNotNull();
