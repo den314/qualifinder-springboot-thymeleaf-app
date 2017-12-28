@@ -23,6 +23,7 @@
                             <td class="text-center">Email</td>
                             <td class="text-center">Phone</td>
                             <td class="text-center">Skills</td>
+                            <td class="text-center">Action</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,6 +33,8 @@
                             <td th:text="${person.email}"></td>
                             <td th:text="${person.phone}"></td>
                             <td th:text="${person.skills}"></td>
+                            <td><a href="#" th:href="@{/admin/people/edit(id=${person.id})}"> <small title="edit" style="color: forestgreen" class="glyphicon glyphicon-edit"></small></a>
+                                <a href="#" th:href="@{/admin/people/delete(id=${person.id})}"> <small title="delete" style="color: red" class="glyphicon glyphicon-remove"></small></a></td>
                         </tr>
                     </tbody>
                 </table>

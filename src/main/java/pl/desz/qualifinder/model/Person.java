@@ -8,6 +8,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -43,7 +44,6 @@ public class Person {
 
     private String phone;
 
-    @NotNull
     @ElementCollection(targetClass = java.util.ArrayList.class)
-    private List<String> skills;
+    private List<String> skills = new ArrayList<>();
 }

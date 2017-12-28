@@ -32,7 +32,7 @@ public class PersonTest {
     @Test
     public void shouldFailWhenAllFieldsAreNull() {
         Set<ConstraintViolation<Person>> constraints = validator.validate(testPersonWithAllNullFields);
-        assertThat(constraints).hasSize(3);
+        assertThat(constraints).hasSize(2);
     }
 
     @Test
