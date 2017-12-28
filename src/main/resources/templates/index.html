@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          th:href="@{/bootstrap/css/bootstrap.min.css}" type="text/css"/>
+    <link rel="stylesheet" href="../static/custom/css/style.css" th:href="@{/custom/css/style.css}" type="text/css"/>
+    <title>Qualifinder - search for workers based on their qualifications</title>
+</head>
+<body>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>Qualifinder</h1>
+        <p>Here you can find people based on their years of experience and propose them a job offer.
+            Click right now on below button to see the how-to search</p>
+        <p>
+            <a class="btn btn-primary btn-lg" th:href="@{/how-to}">How To Search</a>
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <!--<form action="#" th:object="${searchCommand}" th:action="@{/search}" method="POST">-->
+
+                <!--<div th:if="${#fields.hasErrors()}" class="alert alert-danger">-->
+                    <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
+                    <!--<strong>Error occurred: </strong>-->
+                    <!--<p th:each="error : ${#fields.detailedErrors()}" th:text="${error}"></p>-->
+                <!--</div>-->
+
+                <!--<div class="form-group">-->
+                    <!--<input type="text" class="form-control" th:field="*{searchPattern}" placeholder="search like: java:&gt;3&lt;24,python:&gt;6&lt;12"/>-->
+                <!--</div>-->
+
+                <!--<button class="btn btn-default" type="submit">Search</button>-->
+            <!--</form>-->
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" th:src="@{/jquery/jquery-3.2.1.js}"
+        type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        th:src="@{/bootstrap/js/bootstrap.min.js}" type="text/javascript"></script>
+</body>
+</html>
